@@ -10,15 +10,19 @@ public class EmployeeWageCal {
 		Random ran = new Random();
 		int isPresent= ran.nextInt(3);
 		int Hour=0;		
-		if (isPresent==2) {
-			Hour = 8;
+		switch (isPresent) {
+	    case 0:
+	        Hour=0;
+	        break;
+	    case 1:
+	        Hour=4;
+	        break;
+	    
+	    case 2:
+	        Hour=8;
+	        break;
 		}
-		else if(isPresent==1) {
-			Hour = 4;
-		}
-		else {
-			Hour = 0;
-		}
+			
 		
 		int Wage=20;
 		int DailyWage=Hour*Wage;
