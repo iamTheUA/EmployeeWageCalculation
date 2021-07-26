@@ -8,15 +8,19 @@ public class EmployeeWageCal {
 		System.out.println("Welcome to Employee Wage Computation Program");
 		
 		Random ran = new Random();
-		int isPresent= ran.nextInt(2);
-		if(isPresent==1) {
-			System.out.println("Present");
+		int isPresent= ran.nextInt(3);
+		int Hour=0;		
+		if (isPresent==2) {
+			Hour = 8;
 		}
-		else
-			System.out.println("Absent");
+		else if(isPresent==1) {
+			Hour = 4;
+		}
+		else {
+			Hour = 0;
+		}
 		
-		int Hour=8;
-		int Wage=200;
+		int Wage=20;
 		int DailyWage=Hour*Wage;
 	}
 
