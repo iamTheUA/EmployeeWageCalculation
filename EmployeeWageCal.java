@@ -7,32 +7,34 @@ public class EmployeeWageCal {
 		
 		System.out.println("Welcome to Employee Wage Computation Program");
 		
-		int Hour=0;
+		int TotalHour=0;
 		int Wage=20;
 		int MonthlyWage=0;
 		for(int i=0; i<20; i++) {
-			calHour();
+			
+			
+				Random ran = new Random();
+				int isPresent= ran.nextInt(3);
+				int Hour=0;
+				switch (isPresent) {
+			    case 0:
+			        Hour=0;
+			        break;
+			    case 1:
+			        Hour=4;
+			        break;
+			    
+			    case 2:
+			        Hour=8;
+			        break;
+				}
+			
 			int DailyWage=Hour*Wage;
+			TotalHour=Hour+TotalHour;
 			MonthlyWage=MonthlyWage+DailyWage;
-		}
-	
-	}
-	
-	static void calHour() {
-		Random ran = new Random();
-		int isPresent= ran.nextInt(3);
-		int Hour=0;
-		switch (isPresent) {
-	    case 0:
-	        Hour=0;
-	        break;
-	    case 1:
-	        Hour=4;
-	        break;
-	    
-	    case 2:
-	        Hour=8;
-	        break;
+			if(TotalHour>=100) {
+				break;
+			}
 		}
 	}
 }
