@@ -14,6 +14,10 @@ public class EmployeeWageCal {
 		}
 		else
 			System.out.println("Absent");
+		
+		int Hour=8;
+		int Wage=200;
+		int DailyWage=Hour*Wage;
 	}
 
 }
